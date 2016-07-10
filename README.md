@@ -11,7 +11,7 @@ One potentially popular use case is co-display of these tracks with protein doma
 
 This can be implemented by:
 
-* opening the tracks menu in any fully featured sequence viewer (screenshot)[https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-09%20at%2011.03.37%20PM.png]
-* in the genes, select the current annotation and choose 'select all from the dropdown' (screenshot)[https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.11.33%20AM.png]
-* below that, check the show all labels box (screenshot)[https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.22.14%20AM.png]
+* opening the tracks menu in any fully featured sequence viewer [screenshot](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-09%20at%2011.03.37%20PM.png)
+* in the genes, select the current annotation and choose 'select all from the dropdown' [screenshot](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.11.33%20AM.png)
+* below that, check the show all labels box [screenshot](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.22.14%20AM.png)
 * click configure
