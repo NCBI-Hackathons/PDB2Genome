@@ -7,6 +7,8 @@ Example [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/)
 
 * Via gene symbol: https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=RELA
 
+---
+
 One potentially popular use case is co-display of these tracks with protein domains from the Conserved Domain Database (CDD).  This can be done on full-featured NCBI Genome Viewers (Genome Data Viewer, Variation Viewer, 1000 Genomes Viewer, etc.)
 
 This can be implemented by:
@@ -15,3 +17,7 @@ This can be implemented by:
 * in the genes, select the current annotation and choose 'select all from the dropdown' [screenshot](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.11.33%20AM.png)
 * below that, check the show all labels box [screenshot](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.22.14%20AM.png)
 * click configure
+
+---
+
+The pdb accessions displayed on the genome will be linked to structures displayed by [iCN3D](http://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html) after streaming from the PDB in compressed format using [MMTF](http://mmtf.rcsb.org/).  
