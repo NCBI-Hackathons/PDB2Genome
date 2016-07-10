@@ -11,5 +11,5 @@ One potentially popular use case is co-display of these tracks with protein doma
 
 This can be implemented by:
 
-* opening the tracks menu in any fully featured sequence viewer (screenshot)[<screenshot>]
+* opening the tracks menu in any fully featured sequence viewer (screenshot)[https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-09%20at%2011.03.37%20PM.png]
 * 
