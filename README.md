@@ -2,9 +2,9 @@
 Mapping PDB structures to gene-level in genome browsers, and visualizing SNPs
 
 # Background
-Genome browsers like [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/) enable users to view tracks of genomic data, e.g. for gene [C1QA](http://www.ncbi.nlm.nih.gov/gene/712): 
+Genome browsers like [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/) enable users to view tracks of genomic data, e.g. for gene [KIF1A](http://www.ncbi.nlm.nih.gov/gene/547): 
 
-https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
+https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=KIF1A
 
 Adding aligned PDB data as tracks in such a visualization would help reveal relationships between protein structures and SNPs, including small variants of clinical interest.
 
@@ -30,7 +30,7 @@ Such functionality could be useful for those seeking to display modestly-sized (
 
 To reproduce these results:
 
-1.  Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
+1.  Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=KIF1A
 2.  Open Chrome Developer Tools (Cmd-Alt-I)
 3.  Go to DevTools "Console" tab
 4.  Paste the following into DevTools console:
