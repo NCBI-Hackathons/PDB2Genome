@@ -4,20 +4,19 @@ import sys
 import os.path as op
 
 localDir = "/home/ubuntu/pkerp"
-output_dir = 'output/struct_chains'
+output_dir = 'output/struct_chroms'
 
-if op.exists(output_dir):
-    import shutil.rmtree(output_dir)
-
-def save_file((struct_chain, bed_text)):
-    # store a BED file for each PDB ID
+def save_entries(chromosome, out_bed):
     if not op.exists(output_dir):
         os.makedirs(output_dir)
-    filename = output_dir + '/' + struct_chain + ".bed"
+    filename = output_dir + '/' + chromosome + ".bed"
     if op.exists(filename):
-        print >>sys.stderr, "Already exists:", filename
-    with open(filename, 'a') as f:
-        f.write(bed_text + '\n')
+        os.remove(filename)
+    def save_line(x):
+        with open(filename, 'a') as f:
+            f.write(x[1] + "\n")
+    out_bed.foreach(save_line)
+
 
 def reduce_struct_chain_res(x1, x2):
     # Used to calculate the minimum genomic position that corresponds to a nucleotide
@@ -28,9 +27,14 @@ chrom = 'chr2'
 #for chrom in ["chr1",  "chr10", "chr11", "chr12", "chr13", "chr14", "chr15", "chr16", "chr17", "chr18", "chr19", "chr2",  "chr20", "chr21", "chr22", "chr3",  "chr4",  "chr5",  "chr6",  "chr7",  "chr8",  "chr9",  "chrX",  "chrY"]:
 protpos_genomepos = (sc.textFile(localDir + '/output/protpos_chrompos_pdbinfo_formatted_' + chrom)
                        .map(lambda x: x.split())
+                       .filter(lambda x: x[2] == chrom)    #exclude alternate chromosomes
                        .map(lambda x: ((x[5] + "_" + x[6]), (int(x[4]), int(x[4]), (x[2], x[7], '.', x[3], x[5])))))
 struct_bed = protpos_genomepos.reduceByKey(reduce_struct_chain_res)
 struct_bed.take(1)
 
-out_bed = (struct_bed.map(lambda x: (x[0], " ".join(map(str, [x[0], x[1][0], x[1][1]+1, x[1][2][4], '.', x[1][2][3]])))))
-out_bed.foreach(save_file)
+out_bed = (struct_bed.map(lambda x: (x[0], " ".join(map(str, [chrom, x[1][0], x[1][1]+1, x[0], '.', x[1][2][3]])))))
+out_bed.take(1)
+
+save_entries(chrom, out_bed)
+
+#out_bed.foreach(save_file)
