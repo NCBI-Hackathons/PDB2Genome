@@ -24,7 +24,9 @@ This can be implemented by:
 ##Results 1
 
 ## Experimental support for remote tracks 
-In addition to aligning PDB files to the genome, this hackathon also resulted in a [proof of concept for loading track data in NCBI genome browsers from any third-party web server](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/src/js/remote-tracks-experiment.js).  This enables users to load track data without the need for an intermediate backend server, i.e. without the need for "hubs".  Such functionality could be useful for those seeking to programmatically display small sets of track data as static flat files.  Underlying data is hosted on GitHub Pages (e.g. https://ncbi-hackathons.github.io/PDB2Genome/bedjs/2WNU_A.bed.js), which provides static, CORS-enabled, secure web hosting for free.
+In addition to aligning PDB files to the genome, this hackathon also resulted in a [proof of concept for loading track data in NCBI genome browsers from any third-party web server](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/src/js/remote-tracks-experiment.js).  This enables users to load externally-hosted track data without the need for an intermediate backend server, i.e. without the need for a "hub".  
+
+Such functionality could be useful for those seeking to programmatically display small sets of track data as static flat files.  Underlying data is hosted on GitHub Pages (e.g. https://ncbi-hackathons.github.io/PDB2Genome/bedjs/2WNU_A.bed.js), which provides static, CORS-enabled, secure web hosting for free.
 
 To reproduce these results:
 
