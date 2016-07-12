@@ -1,8 +1,0 @@
-We need these files for mapping UCSC chromosome names to NCBI chromosome names:
-
-	wget ftp://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/All/GCF_000001405.33.assembly.txt
-	mv GCF_000001405.33.assembly.txt data/
-
-Generating the chromosome -> pdb mappings:
-
-Copy the script in scripts/pdb2genome.py in a pyspark shell. Make sure to change the `localDir` variable.
