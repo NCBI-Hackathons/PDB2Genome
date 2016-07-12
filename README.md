@@ -1,13 +1,14 @@
 # PDB2Genome
 Mapping PDB structures to gene-level in genome browsers, and visualizing SNPs
 
-Example [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/) gene-level view:
+# Background
+Genome browsers like [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/) enables users to view tracks of genomic data, e.g. for gene C1QA: 
 
-* Via genomic coordinates: https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&chr=11&from=65653596&to=65662972
+https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
 
-* Via gene symbol: https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=RELA
+Adding aligned PDB data as tracks in such a visualization would help reveal relationships between protein structures and SNPs, including small variants of clinical interest.
 
----
+# Use cases
 
 One potentially popular use case is co-display of these tracks with protein domains from the Conserved Domain Database (CDD).  This can be done on full-featured NCBI Genome Viewers (Genome Data Viewer, Variation Viewer, 1000 Genomes Viewer, etc.)
 
@@ -18,11 +19,8 @@ This can be implemented by:
 * below that, check the show all labels box [screenshot](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/Screen%20Shot%202016-07-10%20at%2012.22.14%20AM.png)
 * click configure
 
----
+The PDB accessions displayed on the genome will be linked to structures displayed by [iCn3D](http://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html) after streaming from the PDB in compressed format using [MMTF](http://mmtf.rcsb.org/).  
 
-The pdb accessions displayed on the genome will be linked to structures displayed by [iCN3D](http://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html) after streaming from the PDB in compressed format using [MMTF](http://mmtf.rcsb.org/).  
+# Data
 
----
-
-Files loaded to the NCBI genome data viewer can be recaptituated for other viewers by running the scripts in this repo against the parquet files found at [dataframes.rcsb.org](https://github.com/rcsb/dataframes).
-
+Files loaded to the NCBI Genome Data Viewer can be recapitulated for other genome browsers by running the scripts in this repo against the parquet files found at [dataframes.rcsb.org](https://github.com/rcsb/dataframes).
