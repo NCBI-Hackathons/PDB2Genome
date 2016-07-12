@@ -1,0 +1,8 @@
+esearch -db nuccore -query "3'UTR [FKEY] AND human [ORGN] AND biomol mrna [PROP]" |
+efetch -format gbc |
+xtract -insd "3'UTR" INSDInterval_from INSDInterval_to |
+xargs -n 3 sh -c 'efetch -db nuccore -format fasta \
+  -id "$0" -seq_start "$1" -seq_stop "$2"'
+
+
+
