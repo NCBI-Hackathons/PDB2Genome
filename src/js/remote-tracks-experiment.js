@@ -2,7 +2,7 @@
 //
 // To demo:
 // 1. Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
-// 2. Open your web browser's Developer Tools (e.g. Cmd-Alt-I)
+// 2. Open your Chrome Developer Tools (Cmd-Alt-I)
 // 3. Go to DevTools "Console" tab
 // 4. Paste the following into DevTools console:
 //    jQuery.getScript("https://ncbi-hackathons.github.io/PDB2Genome/remote-tracks-experiment.js");
