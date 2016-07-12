@@ -2,7 +2,7 @@
 Mapping PDB structures to gene-level in genome browsers, and visualizing SNPs
 
 # Background
-Genome browsers like [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/) enables users to view tracks of genomic data, e.g. for gene C1QA: 
+Genome browsers like [NCBI Genome Data Viewer](https://www.ncbi.nlm.nih.gov/genome/gdv/help/) enable users to view tracks of genomic data, e.g. for gene [C1QA](http://www.ncbi.nlm.nih.gov/gene/712): 
 
 https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
 
@@ -10,7 +10,7 @@ Adding aligned PDB data as tracks in such a visualization would help reveal rela
 
 # Use cases
 
-One potentially popular use case is co-display of these tracks with protein domains from the Conserved Domain Database (CDD).  This can be done on full-featured NCBI Genome Viewers (Genome Data Viewer, Variation Viewer, 1000 Genomes Viewer, etc.)
+One potentially popular use case is co-display of these tracks with protein domains from the Conserved Domain Database (CDD).  This can be done on full-featured NCBI genome browsers (Genome Data Viewer, Variation Viewer, 1000 Genomes Viewer, etc.)
 
 This can be implemented by:
 
@@ -31,13 +31,13 @@ Such functionality could be useful for those seeking to display modestly-sized (
 To reproduce these results:
 
 1.  Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
-2.  Open your Chrome Developer Tools (Cmd-Alt-I)
+2.  Open Chrome Developer Tools (Cmd-Alt-I)
 3.  Go to DevTools "Console" tab
 4.  Paste the following into DevTools console:
 
     `jQuery.getScript("https://ncbi-hackathons.github.io/PDB2Genome/remote-tracks-experiment.js");`
-5.  Press "Enter"
-6.  See how the PDB structure track(s) have been added to bottom of Sequence Viewer track list
+5.  Press `Enter`
+6.  See how the PDB structure track(s) have been added to bottom of the Sequence Viewer track list
 
 ## Results 3
 
@@ -46,4 +46,4 @@ The PDB accessions displayed on the genome will be linked to structures displaye
 
 # Data
 
-Files loaded to the NCBI Genome Data Viewer can be recapitulated for other genome browsers by running the scripts in this repo against the parquet files found at [dataframes.rcsb.org](https://github.com/rcsb/dataframes).
+Files loaded to NCBI Genome Data Viewer can be recapitulated for other genome browsers by running the scripts in this repo against the parquet files found at [dataframes.rcsb.org](https://github.com/rcsb/dataframes).
