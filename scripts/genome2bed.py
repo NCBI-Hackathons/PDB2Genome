@@ -32,5 +32,5 @@ protpos_genomepos = (sc.textFile(localDir + '/output/protpos_chrompos_pdbinfo_fo
 struct_bed = protpos_genomepos.reduceByKey(reduce_struct_chain_res)
 struct_bed.take(1)
 
-out_bed = (struct_bed.map(lambda x: (x[0], " ".join(map(str, [x[1][2][0], x[1][0], x[1][1]+1, x[1][2][4], '.', x[1][2][3]])))))
+out_bed = (struct_bed.map(lambda x: (x[0], " ".join(map(str, [x[0], x[1][0], x[1][1]+1, x[1][2][4], '.', x[1][2][3]])))))
 out_bed.foreach(save_file)
