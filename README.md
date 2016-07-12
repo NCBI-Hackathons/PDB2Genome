@@ -26,6 +26,17 @@ This can be implemented by:
 ## Experimental support for remote tracks 
 In addition to aligning PDB files to the genome, this hackathon also resulted in a [proof of concept for loading track data in NCBI genome browsers from any third-party web server](https://github.com/NCBI-Hackathons/PDB2Genome/blob/master/src/js/remote-tracks-experiment.js).  This enables users to load track data without the need for an intermediate backend server, i.e. without the need for "hubs".  Such functionality could be useful for those seeking to programmatically display small sets of track data as static flat files.  Underlying data is hosted on GitHub Pages (e.g. https://ncbi-hackathons.github.io/PDB2Genome/bedjs/2WNU_A.bed.js), which provides static, CORS-enabled, secure web hosting for free.
 
+To reproduce these results:
+
+1.  Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=C1QA
+2.  Open your Chrome Developer Tools (Cmd-Alt-I)
+3.  Go to DevTools "Console" tab
+4.  Paste the following into DevTools console:
+
+    `jQuery.getScript("https://ncbi-hackathons.github.io/PDB2Genome/remote-tracks-experiment.js");`
+5.  Press "Enter"
+6.  See how the PDB structure track(s) have been added to bottom of Sequence Viewer track list
+
 ## Results 3
 
 # Future work
