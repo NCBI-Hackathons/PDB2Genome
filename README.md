@@ -21,3 +21,8 @@ This can be implemented by:
 ---
 
 The pdb accessions displayed on the genome will be linked to structures displayed by [iCN3D](http://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html) after streaming from the PDB in compressed format using [MMTF](http://mmtf.rcsb.org/).  
+
+---
+
+Files loaded to the NCBI genome data viewer can be recaptituated for other viewers by running the scripts in this repo against the parquet files found at [dataframes.rcsb.org](https://github.com/rcsb/dataframes).
+
