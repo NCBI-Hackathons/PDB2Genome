@@ -1,11 +1,12 @@
+# Serializes BED file into JS, to enable CORS and remote genome browser tracks
+
 import json
 
-pdb_id = "2WNU_A"
-beds = {}
-#lines = open("bed/3/" + pdb_id + ".bed").read().split("\n") # Not same as readlines()!
-lines2 = open("bed/3/" + pdb_id + ".bed").read().replace(" ", "\t")
-beds[pdb_id] = lines2
+stem = "chr2"
 
-#js = "beds['" + pdb_id + "'] = " + json.dumps(lines) + ";"
-js = "beds['" + pdb_id + "'] = " + json.dumps(lines2) + ";"
-open(pdb_id + ".bed.js", "w").write(js)
+beds = {}
+lines2 = open(stem + ".bed").read().replace(" ", "\t")
+beds[stem] = lines2
+
+js = "beds['" + stem + "'] = " + json.dumps(lines2) + ";"
+open(stem + ".bed.js", "w").write(js)
