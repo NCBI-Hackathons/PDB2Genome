@@ -3,14 +3,14 @@
 //   - loading remote, third party tracks in Genome Data Viewer
 //
 // To demo:
-// 1. Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=KIF1A
-// 2. Open your web browser's Developer Tools (e.g. Cmd-Alt-I)
+// 1. Go to https://www.ncbi.nlm.nih.gov/genome/gdv/?context=genome&acc=GCF_000001405.33&q=KIF1A in Chrome
+// 2. Open Chrome Developer Tools (e.g. Cmd-Alt-I)
 // 3. Go to DevTools "Console" tab
 // 4. Paste the following into DevTools console:
 //    jQuery.getScript("https://ncbi-hackathons.github.io/PDB2Genome/3d-genome-browser-experiment.js");
 // 5. Press "Enter"
-// 6. See how the PDB structure track(s) have been added to bottom of Sequence Viewer track list//
-//
+// 6. See a PDB structure loaded in iCn3D.  Note: very crude, needs work, merely proof of concept.
+// 7. See how the PDB structure track(s) have been added to bottom of Sequence Viewer track list
 //
 // Author: Eric Weitz (https://github.com/eweitz)
 
